@@ -1,4 +1,10 @@
+// import { query } from "../utils/api";
+
+import { result } from "../utils/model";
+
 const Home = () => {
+  console.log(result);
+
   return (
     <>
       <div className="hero h-screen grid grid-cols-1 md:grid-cols-2">
