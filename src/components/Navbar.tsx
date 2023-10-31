@@ -4,7 +4,7 @@ import omdenaPNG from "../assets/images/omdena.png";
 const Navbar = () => {
   return (
     <>
-      <nav className="fixed h-[60px] w-full z-50 backdrop-blur-10">
+      <nav className="fixed h-[60px] w-full z-50 backdrop-blur-10 shadow-lg">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
             {/* logo  */}
