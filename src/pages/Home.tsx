@@ -111,7 +111,7 @@ const Home = () => {
           <div className="container content-cneter">
             <Reveal>
               <img
-                src={step_1}
+                src={step_2}
                 alt="step 1"
                 className="w-[450px] object-cover border-b-4 border-l-4 border-mainColor shadow-2xl hover:cursor-pointer hover:shadow-xl transition-all ease-in-out delay-500 duration-500"
               />
