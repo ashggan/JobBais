@@ -1,3 +1,5 @@
+import Transition from "../animation/transition";
+
 const Chat = () => {
   return (
     <>
@@ -19,4 +21,4 @@ const Chat = () => {
   );
 };
 
-export default Chat;
+export default Transition(Chat);

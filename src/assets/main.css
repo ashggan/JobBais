@@ -6,3 +6,9 @@ body {
   overflow-x: hidden;
   position: relative;
 }
+
+.content-cneter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

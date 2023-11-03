@@ -7,6 +7,10 @@ export default {
       colors: {
         mainColor: "#faf20d",
       },
+      container: {
+        center: true,
+        padding: "4rem",
+      },
     },
   },
   plugins: [],
