@@ -4,13 +4,13 @@ import omdenaPNG from "../assets/images/omdena.png";
 const Navbar = () => {
   return (
     <>
-      <nav className="fixed h-[60px] w-full z-50  shadow-lg">
+      <nav className="  h-[60px] w-full z-50  shadow-lg">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
             {/* logo  */}
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               <div className="flex flex-shrink-0 items-center">
-                <NavLink to="/">
+                <NavLink to="/#hero">
                   <img
                     className="h-8 w-auto"
                     src={omdenaPNG}

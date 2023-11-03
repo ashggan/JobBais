@@ -10,8 +10,8 @@ const mainVariants = {
     height: 10000,
     scaleY: 0,
     transition: {
-      height: { duration: 0.3, ease: "easeInOut", when: "beforeChildren" },
-      scaleY: { duration: 0.3, delay: 0.1, ease: "easeInOut" },
+      height: { duration: 0.5, ease: "easeInOut", when: "beforeChildren" },
+      scaleY: { duration: 0.5, ease: "easeInOut" },
     },
   },
 };
