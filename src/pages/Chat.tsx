@@ -1,4 +1,5 @@
 import Reveal from "../animation/Reveal";
+import Results from "../components/Results";
 
 const Chat = () => {
   return (
@@ -26,6 +27,9 @@ const Chat = () => {
             Check Baises
           </button>
         </Reveal>
+      </div>
+      <div className=" h-screen flex flex-col gap-y-5 items-center justify-center ">
+        <Results />
       </div>
     </>
   );
