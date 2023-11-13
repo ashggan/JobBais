@@ -1,29 +1,27 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const useProcessApi = (url: string) => {
+const useProcessApi = (text: string) => {
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState(null);
   const [serverError, setServerError] = useState(null);
 
+  const url = import.meta.env.VITE_PROCESS_API;
   useEffect(() => {
     setIsLoading(true);
-    const fetchData = async (url: string) => {
+    const fetchData = async () => {
       try {
-        const res = await axios.get(url);
-        // const data = res;
-        console.log("res");
-        console.log(res);
-        setData(res.data);
-        setIsLoading(false);
-      } catch (err: any) {
-        setServerError(err?.message);
-        setIsLoading(false);
+        const response = await axios.post(url, { text });
+        setData(response.data);
+        // console.log(response.data);
+      } catch (error: any) {
+        setIsLoading(true);
+        setServerError(error?.message);
       }
     };
 
-    fetchData(url);
-  }, [url]);
+    fetchData();
+  }, []);
 
   return { isLoading, data, serverError };
 };
