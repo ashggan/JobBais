@@ -3,24 +3,8 @@ import step_1 from "../assets/images/step-1.png";
 import step_2 from "../assets/images/step-2.png";
 import step_3 from "../assets/images/step-3.png";
 import Reveal from "../animation/Reveal";
-import axios from "axios";
-import { useEffect } from "react";
 
 const Home = () => {
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          "https://jobbais-vfkrofhmwq-lm.a.run.app/"
-        );
-        console.log(response);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchData();
-  }, []);
   return (
     <>
       <div id="hero" className="h-screen w-full md:p-20 flex justify-center">
