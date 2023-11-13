@@ -72,7 +72,7 @@ const Home = () => {
               title="What is the Real Value of Artificial Intelligence? | Omdena"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </div>
         </div>
@@ -171,7 +171,7 @@ const Home = () => {
                 to="/chat"
                 className="bg-mainColor py-3 px-6 text-black hover:bg-gray-700 hover:text-white transition-all ease-in-out delay-500 duration-700 uppercase"
               >
-                trt it
+                Try it
               </NavLink>
             </Reveal>
           </div>
