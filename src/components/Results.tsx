@@ -18,11 +18,11 @@ const Results = ({ results }: ResultsPropType) => {
     if (results?.result) {
       const job = wrapWordsInSpan(results?.result, values);
       setNewJob(job);
-      console.log(job);
+      // console.log(job);
     }
   }, []);
 
-  console.log(values);
+  // console.log(values);
   const [copySuccess, setCopySuccess] = useState(false);
 
   const handleCopyPlainText = () => {

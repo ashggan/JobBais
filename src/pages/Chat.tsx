@@ -37,6 +37,8 @@ const Chat = () => {
     }
   };
 
+  console.log("this is data", results);
+
   return (
     <>
       <div
@@ -95,7 +97,7 @@ const Chat = () => {
                 </div>
               </>
             </Reveal>
-            {isLoading ? <Loading /> : results && <Results results={results} />}
+            {isLoading ? <Loading /> : <Results results={results} />}
           </div>
         </div>
       </div>
