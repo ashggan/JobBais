@@ -46,12 +46,12 @@ const Home = () => {
           <div className="description flex justify-center items-center">
             {/* <video
               src="https://www.youtube.com/watch?v=Kh24kwvrkCA&t=11s"
-              className="w-full h-full"
               controls
             ></video> */}
             <iframe
-              width="1349"
-              height="498"
+              // width="1349"
+              // height="498"
+              className="w-full h-full"
               src="https://www.youtube.com/embed/Kh24kwvrkCA"
               title="What is the Real Value of Artificial Intelligence? | Omdena"
               frameBorder="0"
