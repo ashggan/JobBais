@@ -6,8 +6,6 @@ export const isSentenceLongerThan35Words = (sentence: string): number => {
 };
 
 export const wrapWordsInSpan = (sentence: string, words: string[]): string => {
-  //   const keys = words.map((obj) => Object.keys(obj)[0]);
-  // const values = words.map((obj) => Object.values(obj)[0]);
   for (const word of words) {
     sentence = sentence.replace(
       word,
