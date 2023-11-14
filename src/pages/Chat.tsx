@@ -19,7 +19,7 @@ const Chat = () => {
     setDesc(event.target.value);
 
   const fetchData = async () => {
-    // setResults(null);
+    setResults(null);
     if (!desc) return setError("Job secription can't be empty");
     else if (isSentenceLongerThan35Words(desc) < 35)
       return setError("Job secription should be at least 35 words ");
@@ -72,7 +72,6 @@ const Chat = () => {
             <Reveal>
               <button
                 className="bg-mainColor py-2 px-6 text-black hover:bg-gray-700 hover:text-white transition-all ease-in-out delay-500 duration-700"
-                type="submit"
                 onClick={fetchData}
               >
                 Check Bais
