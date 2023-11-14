@@ -1,18 +1,24 @@
 import { createElement } from "react";
+import { ResulsType } from "./types";
 
 export const isSentenceLongerThan35Words = (sentence: string): number => {
   const words = sentence.split(" ");
   return words.length;
 };
 
-export const wrapWordsInSpan = (sentence: string, words: string[]): string => {
-  for (const word of words) {
+export const wrapWordsInSpan = (res: ResulsType) => {
+  let sentence = res.result;
+  const separatedValues = res.swapped_words.map(
+    (obj) => Object.values(obj)[0]
+  ) as string[];
+  for (const word of separatedValues) {
     sentence = sentence.replace(
       word,
-      `<span className="text-yellow-500">${word}</span>`
+      `<span className="bg-yellow-500">${word}</span>`
     );
   }
-  return sentence;
+  console.log(sentence);
+  return renderHTML(sentence);
 };
 
 export const renderHTML = (rawHTML: string) =>

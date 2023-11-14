@@ -40,8 +40,6 @@ const Chat = () => {
     }
   };
 
-  console.log("this is data", results);
-
   return (
     <>
       <div
@@ -81,7 +79,7 @@ const Chat = () => {
               </button>
             </Reveal>
           </div>
-          <div className="flex flex-col w-6/12 h-full items-start justify-center  ">
+          <div className="flex flex-col md:w-6/12 h-full items-start justify-center  ">
             <Reveal>
               <>
                 <div className="flex items-center gap-x-3    justify-center">

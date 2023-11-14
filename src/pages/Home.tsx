@@ -44,10 +44,6 @@ const Home = () => {
             </div>
           </div>
           <div className="description flex justify-center items-center">
-            {/* <video
-              src="https://www.youtube.com/watch?v=Kh24kwvrkCA&t=11s"
-              controls
-            ></video> */}
             <iframe
               // width="1349"
               // height="498"

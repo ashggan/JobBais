@@ -5,22 +5,14 @@ import copy from "../assets/copy.svg";
 import { wrapWordsInSpan } from "../utils/helpers";
 
 const Results = ({ results }: ResultsPropType) => {
-  const [newJob, setNewJob] = useState<string | undefined>("");
-  const [values, setValues] = useState<string[]>([]);
+  const [newJob, setNewJob] = useState<any>();
 
   useEffect(() => {
-    const separatedValues = results?.swapped_words.map(
-      (obj) => Object.values(obj)[0]
-    ) as string[];
-
-    setValues(separatedValues);
-
     if (results?.result) {
-      const job = wrapWordsInSpan(results?.result, values);
+      const job = wrapWordsInSpan(results);
       setNewJob(job);
-      // console.log(job);
     }
-  }, []);
+  }, [results]);
 
   // console.log(values);
   const [copySuccess, setCopySuccess] = useState(false);
@@ -45,6 +37,7 @@ const Results = ({ results }: ResultsPropType) => {
       <div className="w-full flex justify-center flex-col">
         <Reveal>
           <>
+            {/* <h1>{values[1]} </h1> */}
             <div className="w-full h-full my-5">{newJob}</div>
             <button onClick={handleCopyPlainText} className="">
               <div className="flex w-24 justify-center items-center h-8 gap-x-3">
