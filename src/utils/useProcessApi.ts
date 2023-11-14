@@ -13,7 +13,6 @@ const useProcessApi = (text: string) => {
       try {
         const response = await axios.post(url, { text });
         setData(response.data);
-        // console.log(response.data);
       } catch (error: any) {
         setIsLoading(true);
         setServerError(error?.message);
