@@ -27,7 +27,8 @@ const Chat = () => {
       try {
         setError("");
         setIsLoading(true);
-        const response = await axios.post(url, { text: desc });
+        const response = await axios.get(url);
+        // const response = await axios.post(url, { text: desc });
         setResults(response.data);
         setIsLoading(false);
       } catch (error: any) {
