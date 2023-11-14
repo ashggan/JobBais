@@ -43,14 +43,16 @@ const Results = ({ results }: ResultsPropType) => {
   return (
     <div className="w-full flex justify-center flex-col">
       <Reveal>
-        <div className="w-full h-full my-5   ">{newJob}</div>
+        <>
+          <div className="w-full h-full my-5   ">{newJob} </div>
+          <button onClick={handleCopyPlainText} className=" ">
+            <div className="flex w-24 justify-center items-center h-8 gap-x-3">
+              <img src={copy} className="h-4" />
+              {copySuccess ? "Copied!" : "Copy "}
+            </div>
+          </button>
+        </>
       </Reveal>
-      <button onClick={handleCopyPlainText} className=" ">
-        <div className="flex w-24 justify-center items-center h-8 gap-x-3">
-          <img src={copy} className="h-4" />
-          {copySuccess ? "Copied!" : "Copy "}
-        </div>
-      </button>
     </div>
   );
 };

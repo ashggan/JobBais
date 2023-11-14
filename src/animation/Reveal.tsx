@@ -36,8 +36,8 @@ const Reveal = ({ children, width = "fit-content" }: Props) => {
           initial="hidden"
           animate={mainControls}
           transition={{
-            duration: 0.7,
-            delay: 1,
+            duration: 0.5,
+            delay: 0.5,
           }}
           className=""
         >
@@ -51,8 +51,8 @@ const Reveal = ({ children, width = "fit-content" }: Props) => {
           initial="hidden"
           animate={slideControls}
           transition={{
-            duration: 0.7,
-            delay: 0.3,
+            duration: 0.5,
+            delay: 0.5,
             ease: "easeInOut",
           }}
           className="absolute top-4 bottom-4 left-0 right-0 bg-mainColor z-24"
