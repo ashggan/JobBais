@@ -25,7 +25,6 @@ const Chat = () => {
       return setError("Job secription should be at least 35 words ");
     else {
       try {
-        scrollToResults();
         setError("");
         setIsLoading(true);
         const response = await axios.post(
@@ -33,8 +32,9 @@ const Chat = () => {
           { text: desc }
         );
         setResults(response.data);
-        console.log(response.data);
+        console.log(response);
         setIsLoading(false);
+        // scrollToResults();
       } catch (error: any) {
         setIsLoading(false);
         setServerError(error?.message);
@@ -43,12 +43,12 @@ const Chat = () => {
   };
 
   // Scroll to the div with id "results"
-  const scrollToResults = () => {
-    const resultsDiv = document.getElementById("result");
-    if (resultsDiv) {
-      resultsDiv.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  // const scrollToResults = () => {
+  //   const resultsDiv = document.getElementById("result");
+  //   if (resultsDiv) {
+  //     resultsDiv.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
 
   return (
     <>
