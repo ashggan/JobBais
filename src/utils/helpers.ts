@@ -18,7 +18,7 @@ export const wrapWordsInSpan = (res: ResulsType) => {
     );
   }
   console.log(sentence);
-  return renderHTML(sentence);
+  return sentence;
 };
 
 export const renderHTML = (rawHTML: string) =>

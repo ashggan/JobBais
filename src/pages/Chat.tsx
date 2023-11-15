@@ -25,6 +25,7 @@ const Chat = () => {
       return setError("Job secription should be at least 35 words ");
     else {
       try {
+        scrollToResults();
         setError("");
         setIsLoading(true);
         const response = await axios.post(
@@ -32,6 +33,7 @@ const Chat = () => {
           { text: desc }
         );
         setResults(response.data);
+        console.log(response.data);
         setIsLoading(false);
       } catch (error: any) {
         setIsLoading(false);
@@ -40,14 +42,22 @@ const Chat = () => {
     }
   };
 
+  // Scroll to the div with id "results"
+  const scrollToResults = () => {
+    const resultsDiv = document.getElementById("result");
+    if (resultsDiv) {
+      resultsDiv.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <div
         id="heros"
-        className="min-h-[70vh] mt-16 flex md:flex-col gap-y-5 items-center justify-center "
+        className=" md:min-h-[80vh] mt-16 flex md:flex-col gap-y-5 items-center justify-center "
       >
-        <div className="container md:flex items-start justify-center">
-          <div className="flex flex-col  md:w-6/12">
+        <div className="container md:flex items-start gap-y-5 justify-center">
+          <div className="flex flex-col  md:w-6/12 mb-5">
             <Reveal>
               <textarea
                 name=""
@@ -57,7 +67,7 @@ const Chat = () => {
                 value={desc}
                 onChange={handleChange}
                 placeholder="Paste a job description"
-                className="border-2  border-gray-700 p-5 md:w-[40vw] shadow-2xl
+                className="border-2 w-[70vw]  border-gray-700 p-5 md:w-[40vw] shadow-2xl
           outline-none focus:outline-none text-white bg-gray-700"
               ></textarea>
             </Reveal>
@@ -79,13 +89,16 @@ const Chat = () => {
               </button>
             </Reveal>
           </div>
-          <div className="flex flex-col md:w-6/12 h-full items-start justify-center  ">
+          <div
+            id="result"
+            className="flex flex-col md:w-6/12 h-full items-start justify-center"
+          >
             <Reveal>
               <>
                 <div className="flex items-center gap-x-3    justify-center">
-                  <h1 className="text-2xl font-bold">Results</h1>
+                  <h1 className="text-2xl font-bold">Bais Results</h1>
                   {results &&
-                    (results.swapped_words.length ? (
+                    (results.swapped_words?.length ? (
                       <small className="capitalize text-white bg-green-500 rounded-lg text-xs px-2">
                         positive
                       </small>

@@ -43,6 +43,7 @@ const Home = () => {
               </Reveal>
             </div>
           </div>
+
           <div className="description flex justify-center items-center">
             <iframe
               // width="1349"
@@ -97,7 +98,7 @@ const Home = () => {
             <Reveal>
               <h1 className="text-2xl md:text-4xl capitalize font-bold text-gray-700">
                 <span className="text-mainColor">2# </span> Our advanced
-                <span className="text-mainColor">EQUIJOB</span>
+                <span className="text-mainColor"> EQUIJOB </span>
                 model will analyze the text and identify any biases present in
                 the language used.
               </h1>
