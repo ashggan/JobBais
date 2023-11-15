@@ -14,7 +14,7 @@ export const wrapWordsInSpan = (res: ResulsType) => {
   for (const word of separatedValues) {
     sentence = sentence.replace(
       word,
-      `<span class="bg-mainColor">${word}</span>`
+      `<span class="bg-mainColor"> ${word} </span>`
     );
   }
   console.log(separatedValues);
