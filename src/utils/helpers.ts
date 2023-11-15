@@ -14,14 +14,14 @@ export const wrapWordsInSpan = (res: ResulsType) => {
   for (const word of separatedValues) {
     sentence = sentence.replace(
       word,
-      `<span className="bg-yellow-500">${word}</span>`
+      `<span class="bg-mainColor">${word}</span>`
     );
   }
-  console.log(sentence);
+  console.log(separatedValues);
   return sentence;
 };
 
 export const renderHTML = (rawHTML: string) =>
-  createElement("div", {
+  createElement("p", {
     dangerouslySetInnerHTML: { __html: rawHTML },
   });

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Reveal from "../animation/Reveal";
 import { ResultsPropType } from "../utils/types";
 import copy from "../assets/copy.svg";
-import { wrapWordsInSpan } from "../utils/helpers";
+import { renderHTML, wrapWordsInSpan } from "../utils/helpers";
 
 const Results = ({ results }: ResultsPropType) => {
   const [newJob, setNewJob] = useState<any>();
@@ -37,7 +37,8 @@ const Results = ({ results }: ResultsPropType) => {
       <div className="w-full flex justify-center flex-col">
         <Reveal>
           <>
-            <div className="w-full h-full my-5">{newJob}</div>
+            <div className="w-full h-full my-5">{renderHTML(newJob)}</div>
+
             <button onClick={handleCopyPlainText} className="">
               <div className="flex w-24 justify-center items-center h-8 gap-x-3">
                 <img src={copy} className="h-4" alt="Copy" />

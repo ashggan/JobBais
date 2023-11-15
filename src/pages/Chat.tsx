@@ -6,7 +6,7 @@ import { ResulsType } from "../utils/types";
 import Results from "../components/Results";
 import Loading from "../components/Loading";
 
-// const url = import.meta.env.VITE_PROCESS_API;
+const url = "https://jobbais-vfkrofhmwq-lm.a.run.app/process";
 
 const Chat = () => {
   const [desc, setDesc] = useState("");
@@ -27,12 +27,9 @@ const Chat = () => {
       try {
         setError("");
         setIsLoading(true);
-        const response = await axios.post(
-          "https://jobbais-vfkrofhmwq-lm.a.run.app/process",
-          { text: desc }
-        );
+        const response = await axios.post(url, { text: desc });
         setResults(response.data);
-        console.log(response);
+        // console.log(response);
         setIsLoading(false);
         // scrollToResults();
       } catch (error: any) {
